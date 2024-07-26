@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastermind Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Baskerville&family=Lobster&family=Wallpoet&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div><h1>MasterMind</h1></div>
+
+  <div class="game_board">
+
+    <div class="code_row">
+      <div class="secret_window covered">
+        <div class="btn digit gray" id="code_a"></div>
+        <div class="btn digit gray" id="code_b"></div>
+        <div class="btn digit gray" id="code_c"></div>
+        <div class="btn digit gray" id="code_d"></div>
+      </div>
+    </div>
+
+    <div class="row one">
+      <div class="turn_ident" id="turn_1">
+        <div>level</div>
+          <div>1</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_1 guess gray" color="gray" id="guess_1_1"></div>
+        <div type="button" class="btn level_1 guess gray" color="gray" id="guess_1_2"></div>
+        <div type="button" class="btn level_1 guess gray" color="gray" id="guess_1_3"></div>
+        <div type="button" class="btn level_1 guess gray" color="gray" id="guess_1_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_1_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_1_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_1_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_1_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row two">
+      <div class="turn_ident" id="turn_2">
+        <div>level</div>
+          <div>2</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_2 guess gray" color="gray" id="guess_2_1"></div>
+        <div type="button" class="btn level_2 guess gray" color="gray" id="guess_2_2"></div>
+        <div type="button" class="btn level_2 guess gray" color="gray" id="guess_2_3"></div>
+        <div type="button" class="btn level_2 guess gray" color="gray" id="guess_2_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_2_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_2_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_2_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_2_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row three">
+      <div class="turn_ident" id="turn_3">
+        <div>level</div>
+        <div>3</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_3 guess gray" color="gray" id="guess_3_1"></div>
+        <div type="button" class="btn level_3 guess gray" color="gray" id="guess_3_2"></div>
+        <div type="button" class="btn level_3 guess gray" color="gray" id="guess_3_3"></div>
+        <div type="button" class="btn level_3 guess gray" color="gray" id="guess_3_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_3_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_3_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_3_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_3_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row four">
+      <div class="turn_ident" id="turn_4">
+        <div>level</div>
+        <div>4</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_4 guess gray" color="gray" id="guess_4_1"></div>
+        <div type="button" class="btn level_4 guess gray" color="gray" id="guess_4_2"></div>
+        <div type="button" class="btn level_4 guess gray" color="gray" id="guess_4_3"></div>
+        <div type="button" class="btn level_4 guess gray" color="gray" id="guess_4_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_4_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_4_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_4_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_4_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row five">
+      <div class="turn_ident" id="turn_5">
+        <div>level</div>
+        <div>5</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_5 guess gray" color="gray" id="guess_5_1"></div>
+        <div type="button" class="btn level_5 guess gray" color="gray" id="guess_5_2"></div>
+        <div type="button" class="btn level_5 guess gray" color="gray" id="guess_5_3"></div>
+        <div type="button" class="btn level_5 guess gray" color="gray" id="guess_5_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_5_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_5_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_5_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_5_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row six">
+      <div class="turn_ident" id="turn_6">
+        <div>level</div>
+        <div>6</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_6 guess gray" color="gray" id="guess_6_1"></div>
+        <div type="button" class="btn level_6 guess gray" color="gray" id="guess_6_2"></div>
+        <div type="button" class="btn level_6 guess gray" color="gray" id="guess_6_3"></div>
+        <div type="button" class="btn level_6 guess gray" color="gray" id="guess_6_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_6_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_6_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_6_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_6_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row seven">
+      <div class="turn_ident" id="turn_7">
+        <div>level</div>
+        <div>7</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_7 guess gray" color="gray" id="guess_7_1"></div>
+        <div type="button" class="btn level_7 guess gray" color="gray" id="guess_7_2"></div>
+        <div type="button" class="btn level_7 guess gray" color="gray" id="guess_7_3"></div>
+        <div type="button" class="btn level_7 guess gray" color="gray" id="guess_7_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_7_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_7_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_7_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_7_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row eight">
+      <div class="turn_ident" id="turn_8">
+        <div>level</div>
+        <div>8</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_8 guess gray" color="gray" id="guess_8_1"></div>
+        <div type="button" class="btn level_8 guess gray" color="gray" id="guess_8_2"></div>
+        <div type="button" class="btn level_8 guess gray" color="gray" id="guess_8_3"></div>
+        <div type="button" class="btn level_8 guess gray" color="gray" id="guess_8_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_8_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_8_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_8_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_8_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row nine">
+      <div class="turn_ident" id="turn_9">
+        <div>level</div>
+        <div>9</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_9 guess gray" color="gray" id="guess_9_1"></div>
+        <div type="button" class="btn level_9 guess gray" color="gray" id="guess_9_2"></div>
+        <div type="button" class="btn level_9 guess gray" color="gray" id="guess_9_3"></div>
+        <div type="button" class="btn level_9 guess gray" color="gray" id="guess_9_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_9_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_9_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_9_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_9_4"></div></div>
+      </div>
+    </div>
+
+    <div class="row ten">
+      <div class="turn_ident" id="turn_10">
+        <div>level</div>
+        <div>10</div>
+      </div>
+      <div class="answer">
+        <div type="button" class="btn level_10 guess gray" color="gray" id="guess_10_1"></div>
+        <div type="button" class="btn level_10 guess gray" color="gray" id="guess_10_2"></div>
+        <div type="button" class="btn level_10 guess gray" color="gray" id="guess_10_3"></div>
+        <div type="button" class="btn level_10 guess gray" color="gray" id="guess_10_4"></div>
+      </div>
+      <div class="result_bank">
+        <div class="result_back"><div type="button" class="btn result" id="result_10_1"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_10_2"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_10_3"></div></div>
+        <div class="result_back"><div type="button" class="btn result" id="result_10_4"></div></div>
+      </div>
+    </div>
+
+    <div class="submit_row">
+      <div type="button" id="submit">Submit Code</div>
+    </div></div>
+
+   <div><h2 class="winner"></h2></div>
+  <div><h2 class="restart">Press Any Key to Start!</h2></div>
+
+</div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+body {
+  background-color: rgb(80, 79, 79);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 90px;
+  color:rgb(13, 255, 0);
+}
+
+h2 {
+  font-family: 'Audiowide', sans-serif;
+  color:rgb(13, 255, 0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game_board {
+  background-color: black;
+  width: 400px;
+  height: 843px;
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: 60px, 280px, 60px;
+  grid-template-rows: 120px repeat(10, 60px) 80px;
+  gap: 3px;
+  border-radius: 15px;
+}
+
+.code_row {
+  height: 120px;
+  background-color:rgb(138, 149, 157);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.secret_window {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 80px;
+  background-color:rgb(67, 73, 78);
+  border-radius: 15px;
+  border: 2px white solid;
+}
+
+.digit {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.row {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(138, 149, 157);
+}
+
+.submit_row {
+  height: 90px;
+  display: flex;
+  background-color:rgb(138, 149, 157);
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 12px 12px;
+}
+
+#submit {
+  font-family: 'Audiowide', sans-serif;
+  color:rgb(13, 255, 0);
+  width: 250px;
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 3px gray solid;
+}
+
+.turn_ident {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Audiowide', sans-serif;
+  color:rgb(138, 149, 157);
+  margin: 0px;
+  width: 60px;
+  border-right: 3px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.current { 
+  color:rgb(13, 255, 0);
+  font-size: large;
+}
+
+.completed {
+  font-size: medium;
+  color:rgb(67, 67, 67)
+}
+
+.answer {
+  display: flex;
+  width: 240px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.result_bank {
+  width: 60px;
+  border-left: 3px solid black;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  gap: .5px;
+}
+
+.guess {
+  background-color: rgb(33, 33, 33);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.btn_gone {
+  height: 0px;
+  width: 0px;
+  border: 0px;
+}
+
+.result_back {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result {
+    background-color:rgb(138, 149, 157);
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    /* border: 1px solid white */
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.gray {
+  background-color:rgb(87, 91, 95);
+}
+
+.winner {
+  height: 60px;
+  font-size: 50px;
+  color:rgb(13, 255, 0);
+}
+
+.covered {
+
+}
+
+
+.lose {
+  background-color: rgb(179, 38, 38);
+}
+
+.win {
+  background-color: rgb(64, 145, 46);
+}
